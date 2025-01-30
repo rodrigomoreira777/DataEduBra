@@ -22,4 +22,10 @@ DataEduBra/
 ├── requirements.txt    # Lista de dependências do projeto
 ├── README.md           # Este arquivo de documentação
 └── .gitignore          # Arquivo para ignorar arquivos e pastas no Git
+##
 
+🛠️ Pré-requisitos
+Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:
+
+Python 3.8 ou superior
+pip (gerenciador de pacotes do Python)

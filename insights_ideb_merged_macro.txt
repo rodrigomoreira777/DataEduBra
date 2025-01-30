@@ -1,0 +1,15 @@
+Aqui estão os principais insights com base nos dados:
+
+1. Principais Insights
+O percentual médio de escolas que utilizam internet cresceu ao longo dos anos.
+A maioria das escolas está concentrada na faixa de IDEB entre 2.5 e 7.5.
+Escolas com menores faixas de IDEB apresentam menor adoção da internet no ensino, enquanto as de faixas mais altas possuem percentuais significativamente maiores.
+2. Padrões e Tendências
+Há uma relação direta entre IDEB e acesso à internet: conforme a faixa de IDEB aumenta, o percentual de escolas com internet também cresce.
+A categoria 0.0 ≤ IDEB < 2.5 tem apenas 1.7% das escolas utilizando internet, indicando uma forte correlação entre baixa qualidade educacional e falta de infraestrutura tecnológica.
+A maior parte das escolas está na faixa 2.5 ≤ IDEB < 7.5, onde o uso da internet já apresenta um aumento significativo.
+3. Sugestões para Melhorar o IDEB
+Investimento em Infraestrutura: Expandir o acesso à internet nas escolas com IDEB mais baixo pode ajudar a impulsionar a qualidade do ensino.
+Capacitação Docente: Implementar treinamentos para professores no uso de tecnologias educacionais pode aumentar o aproveitamento da infraestrutura digital.
+Programas de Incentivo: Criar iniciativas que forneçam equipamentos e conectividade às escolas de baixa pontuação no IDEB.
+Monitoramento Contínuo: Acompanhar a evolução da adoção da internet e seu impacto nos indicadores de aprendizagem para ajustar estratégias.

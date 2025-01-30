@@ -7,7 +7,7 @@ Este repositório tem como objetivo armazenar os arquivos utilizados para a real
 
 ## 📁 Estrutura do Projeto
 
-```plaintext
+```
 DataEduBra/
 │
 ├── save_data.py        # Script para buscar e processar os dados do Censo Escolar e IDEB
@@ -22,109 +22,148 @@ DataEduBra/
 ├── requirements.txt    # Lista de dependências do projeto
 ├── README.md           # Este arquivo de documentação
 └── .gitignore          # Arquivo para ignorar arquivos e pastas no Git
-🛠️ Pré-requisitos
+```
+
+## 🛠️ Pré-requisitos
+
 Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:
 
-Python 3.8 ou superior
-pip (gerenciador de pacotes do Python)
-📦 Instalação
-Clone este repositório:
+- **Python 3.8 ou superior**
+- **pip** (gerenciador de pacotes do Python)
 
-bash
-Copiar
-git clone <URL_DO_REPOSITÓRIO>
-cd DataEduBra
-Instale as dependências necessárias:
+## 📦 Instalação
 
-bash
-Copiar
-pip install -r requirements.txt
-📂 Organização das Pastas
-queries/: Contém os arquivos SQL utilizados para buscar os dados do Censo Escolar e IDEB.
+1. **Clone este repositório:**
 
-censo_query.sql: Query para obter dados do Censo Escolar.
-ideb_query.sql: Query para obter dados do IDEB.
-data/: Diretório onde os dados processados e agregados serão armazenados.
+    ```bash
+    git clone <URL_DO_REPOSITÓRIO>
+    cd DataEduBra
+    ```
 
-ideb_merged_macro.xlsx: Arquivo resultante da junção e agregação dos dados do Censo Escolar e IDEB.
-📝 Descrição dos Scripts
-1. save_data.py
+2. **Instale as dependências necessárias:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## 📂 Organização das Pastas
+
+- **`queries/`**: Contém os arquivos SQL utilizados para buscar os dados do Censo Escolar e IDEB.
+  
+  - **`censo_query.sql`**: Query para obter dados do Censo Escolar.
+  - **`ideb_query.sql`**: Query para obter dados do IDEB.
+
+- **`data/`**: Diretório onde os dados processados e agregados serão armazenados.
+  
+  - **`ideb_merged_macro.xlsx`**: Arquivo resultante da junção e agregação dos dados do Censo Escolar e IDEB.
+
+## 📝 Descrição dos Scripts
+
+### 1. `save_data.py`
+
 Este script é responsável por:
 
-Ler as queries SQL armazenadas na pasta queries/.
-Executar as queries utilizando a biblioteca basedosdados.
-Processar os dados obtidos, realizando merges e transformações necessárias.
-Gerar o arquivo ideb_merged_macro.xlsx na pasta data/.
-Como Executar:
+- Ler as queries SQL armazenadas na pasta `queries/`.
+- Executar as queries utilizando a biblioteca `basedosdados`.
+- Processar os dados obtidos, realizando merges e transformações necessárias.
+- Gerar o arquivo `ideb_merged_macro.xlsx` na pasta `data/`.
 
-bash
-Copiar
+**Como Executar:**
+
+```bash
 python save_data.py
-2. dashboard.py
-Este script gera dashboards informativos a partir dos dados processados em ideb_merged_macro.xlsx.
+```
 
-Funcionalidades:
+### 2. `dashboard.py`
 
-Criação de gráficos e visualizações para análise dos dados.
-Salva os gráficos na pasta data/ para fácil acesso e visualização.
-Como Executar:
+Este script gera dashboards informativos a partir dos dados processados em `ideb_merged_macro.xlsx`.
 
-bash
-Copiar
+**Funcionalidades:**
+
+- Criação de gráficos e visualizações para análise dos dados.
+- Salva os gráficos na pasta `data/` para fácil acesso e visualização.
+
+**Como Executar:**
+
+```bash
 python dashboard.py
-3. ia_insights.py
+```
+
+### 3. `ia_insights.py`
+
 Este script utiliza a API do OpenAI para gerar insights automatizados a partir dos dados processados.
 
-Funcionalidades:
+**Funcionalidades:**
 
-Análise dos dados agregados.
-Geração de resumos, identificação de padrões e sugestões de melhorias utilizando Inteligência Artificial.
-Como Executar:
+- Análise dos dados agregados.
+- Geração de resumos, identificação de padrões e sugestões de melhorias utilizando Inteligência Artificial.
 
-bash
-Copiar
+**Como Executar:**
+
+```bash
 python ia_insights.py
-4. main.py
+```
+
+### 4. `main.py`
+
 Este é o script principal que controla a execução dos demais scripts de forma automatizada.
 
-Fluxo de Execução:
+**Fluxo de Execução:**
 
-Verificação do Arquivo ideb_merged_macro.xlsx:
+1. **Verificação do Arquivo `ideb_merged_macro.xlsx`:**
+    - **Se não existir:** Executa `save_data.py` para gerar o arquivo.
+    - **Se existir:** Pula a execução de `save_data.py`.
 
-Se não existir: Executa save_data.py para gerar o arquivo.
-Se existir: Pula a execução de save_data.py.
-Execução do Dashboard:
+2. **Execução do Dashboard:**
+    - Executa `dashboard.py` para criar o dashboard a partir dos dados.
 
-Executa dashboard.py para criar o dashboard a partir dos dados.
-Geração de Insights com IA:
+3. **Geração de Insights com IA:**
+    - Após a criação do dashboard, pergunta ao usuário se deseja gerar insights utilizando IA.
+    - **Se a resposta for "sim" (em qualquer combinação de maiúsculas/minúsculas):** Executa `ia_insights.py`.
+    - **Caso contrário:** Informa que os insights não serão gerados no momento.
 
-Após a criação do dashboard, pergunta ao usuário se deseja gerar insights utilizando IA.
-Se a resposta for "sim" (em qualquer combinação de maiúsculas/minúsculas): Executa ia_insights.py.
-Caso contrário: Informa que os insights não serão gerados no momento.
-Como Executar:
+**Como Executar:**
 
-bash
-Copiar
+```bash
 python main.py
-📋 Instruções de Uso
-Executar o Processo Completo:
-O script main.py gerencia todo o fluxo de execução. Ao rodá-lo, ele verificará se os dados já foram processados e, caso contrário, executará os scripts necessários para gerar os dados, criar o dashboard e, opcionalmente, gerar insights utilizando IA.
+```
 
-bash
-Copiar
+## 📋 Instruções de Uso
+
+### Executar o Processo Completo:
+
+O script `main.py` gerencia todo o fluxo de execução. Ao rodá-lo, ele verificará se os dados já foram processados e, caso contrário, executará os scripts necessários para gerar os dados, criar o dashboard e, opcionalmente, gerar insights utilizando IA.
+
+```bash
 python main.py
-Gerar Insights Manualmente:
-Caso deseje gerar insights utilizando IA de forma independente, você pode executar diretamente o script ia_insights.py:
+```
 
-bash
-Copiar
+### Gerar Insights Manualmente:
+
+Caso deseje gerar insights utilizando IA de forma independente, você pode executar diretamente o script `ia_insights.py`:
+
+```bash
 python ia_insights.py
-🔧 Configurações Adicionais
-Configuração da API do OpenAI:
+```
+
+## 🔧 Configurações Adicionais
+
+### Configuração da API do OpenAI:
+
 Para utilizar os recursos de IA, é necessário uma chave API válida do OpenAI. Por motivos óbvios, não compartilho a minha nesse projeto.
 
-Atualização das Queries:
-As queries SQL estão armazenadas na pasta queries/. Para modificar ou atualizar as consultas, edite os arquivos censo_query.sql e ideb_query.sql conforme necessário.
+### Atualização das Queries:
 
-📄 Licença
-Este projeto está licenciado sob os termos da licença MIT.
+As queries SQL estão armazenadas na pasta `queries/`. Para modificar ou atualizar as consultas, edite os arquivos `censo_query.sql` e `ideb_query.sql` conforme necessário.
+
+## 📄 Licença
+
+Este projeto está licenciado sob os termos da licença [MIT](LICENSE).
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorar este projeto.
+
+## 📞 Contato
+
+Para quaisquer dúvidas ou sugestões, entre em contato através do [seu-email@example.com](mailto:seu-email@example.com).

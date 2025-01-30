@@ -160,10 +160,3 @@ As queries SQL estão armazenadas na pasta `queries/`. Para modificar ou atualiz
 
 Este projeto está licenciado sob os termos da licença [MIT](LICENSE).
 
-## 🤝 Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorar este projeto.
-
-## 📞 Contato
-
-Para quaisquer dúvidas ou sugestões, entre em contato através do [seu-email@example.com](mailto:seu-email@example.com).

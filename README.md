@@ -5,6 +5,8 @@
 
 Este repositório tem como objetivo armazenar os arquivos utilizados para a realização do **Desafio Case: Análise de Dados Educacionais - Censo Escolar**. O projeto envolve a coleta, processamento e análise de dados educacionais provenientes do Censo Escolar e do IDEB (Índice de Desenvolvimento da Educação Básica), culminando na geração de dashboards informativos e insights automatizados utilizando Inteligência Artificial.
 
+Um **print do dashboard gerado** foi incorporado na raiz do projeto para facilitar a avaliação do resultado da análise.
+
 ## 📁 Estrutura do Projeto
 
 ```
@@ -21,6 +23,8 @@ DataEduBra/
 │   └── ideb_merged_macro.xlsx  # Arquivo de dados processados e agregados
 ├── requirements.txt    # Lista de dependências do projeto
 ├── README.md           # Este arquivo de documentação
+├── dashboard.png       # Print do dashboard gerado para avaliação
+├── insights_ia.txt     # Exemplo de saída de insights gerados pela IA
 └── .gitignore          # Arquivo para ignorar arquivos e pastas no Git
 ```
 
@@ -82,6 +86,7 @@ Este script gera dashboards informativos a partir dos dados processados em `ideb
 
 - Criação de gráficos e visualizações para análise dos dados.
 - Salva os gráficos na pasta `data/` para fácil acesso e visualização.
+- Um **print do dashboard gerado** foi salvo na raiz do projeto como `dashboard.png` para referência.
 
 **Como Executar:**
 
@@ -97,6 +102,7 @@ Este script utiliza a API do OpenAI para gerar insights automatizados a partir d
 
 - Análise dos dados agregados.
 - Geração de resumos, identificação de padrões e sugestões de melhorias utilizando Inteligência Artificial.
+- A saída gerada pela IA foi salva como um **exemplo no arquivo `insights_ia.txt`** na raiz do projeto.
 
 **Como Executar:**
 
@@ -156,7 +162,11 @@ Para utilizar os recursos de IA, é necessário uma chave API válida do OpenAI.
 
 As queries SQL estão armazenadas na pasta `queries/`. Para modificar ou atualizar as consultas, edite os arquivos `censo_query.sql` e `ideb_query.sql` conforme necessário.
 
+### Arquivos de Exemplo:
+
+- **`dashboard.png`**: Um print do dashboard gerado foi salvo na raiz do projeto para avaliação.
+- **`insights_ia.txt`**: Um exemplo de saída dos insights gerados pela IA foi salvo na raiz do diretório.
+
 ## 📄 Licença
 
 Este projeto está licenciado sob os termos da licença [MIT](LICENSE).
-

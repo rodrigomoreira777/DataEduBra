@@ -8,7 +8,7 @@ Este repositório tem como objetivo armazenar os arquivos utilizados para a real
 ## 📁 Estrutura do Projeto
 
 ```plaintext
-ideb_project/
+DataEduBra/
 │
 ├── save_data.py        # Script para buscar e processar os dados do Censo Escolar e IDEB
 ├── dashboard.py        # Script para gerar dashboards a partir dos dados processados

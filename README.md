@@ -23,12 +23,13 @@ DataEduBra/
 ├── README.md           # Este arquivo de documentação
 └── .gitignore          # Arquivo para ignorar arquivos e pastas no Git
 
-🛠️ Pré-requisitos
+## 🛠️ Pré-requisitos
 Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:
 
 Python 3.8 ou superior
 pip (gerenciador de pacotes do Python)
-📦 Instalação
+
+## 📦 Instalação
 Clone este repositório:
 
 bash
@@ -40,7 +41,8 @@ Instale as dependências necessárias:
 bash
 Copiar
 pip install -r requirements.txt
-📂 Organização das Pastas
+
+## 📂 Organização das Pastas
 queries/: Contém os arquivos SQL utilizados para buscar os dados do Censo Escolar e IDEB.
 
 censo_query.sql: Query para obter dados do Censo Escolar.
@@ -48,7 +50,8 @@ ideb_query.sql: Query para obter dados do IDEB.
 data/: Diretório onde os dados processados e agregados serão armazenados.
 
 ideb_merged_macro.xlsx: Arquivo resultante da junção e agregação dos dados do Censo Escolar e IDEB.
-📝 Descrição dos Scripts
+
+## 📝 Descrição dos Scripts
 1. save_data.py
 Este script é responsável por:
 
@@ -107,7 +110,8 @@ Como Executar:
 bash
 Copiar
 python main.py
-📋 Instruções de Uso
+
+## 📋 Instruções de Uso
 Executar o Processo Completo:
 
 O script main.py gerencia todo o fluxo de execução. Ao rodá-lo, ele verificará se os dados já foram processados e, caso contrário, executará os scripts necessários para gerar os dados, criar o dashboard e, opcionalmente, gerar insights utilizando IA.
@@ -122,14 +126,15 @@ Caso deseje gerar insights utilizando IA de forma independente, você pode execu
 bash
 Copiar
 python ia_insights.py
-🔧 Configurações Adicionais
+
+## 🔧 Configurações Adicionais
 Configuração da API do OpenAI:
 
-Para utilizar os recursos de IA, certifique-se de ter uma chave de API válida do OpenAI. Insira sua chave diretamente no script ia_insights.py ou configure-a como uma variável de ambiente para maior segurança.
+Para utilizar os recursos de IA, é necessário uma chave API válida do OpenAI. Por motivos óbvios, não compartilho a minha nesse projeto.
 
 Atualização das Queries:
 
 As queries SQL estão armazenadas na pasta queries/. Para modificar ou atualizar as consultas, edite os arquivos censo_query.sql e ideb_query.sql conforme necessário.
 
-📄 Licença
+## 📄 Licença
 Este projeto está licenciado sob os termos da licença MIT.
